@@ -22,8 +22,10 @@ export default function Datail() {
       {loading ? (
         <div>Welcome Pokemon world! {id}</div>
       ) : (
-        <div>
-          <h1>{pokemon.name}</h1>
+        <div className="bg-slate-400">
+          <h1 className="text-xl">
+            {pokemon.name} <p className="text-lg text-gray-600"> #{id}</p>
+          </h1>
           <img src={pokemon.sprites?.front_default} alt={pokemon.name} />
           <img src={pokemon.sprites?.back_default} alt={pokemon.name} />
           <ul>

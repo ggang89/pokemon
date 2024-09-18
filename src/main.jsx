@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./App.jsx";
 import Detail from "./pages/detail.jsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/detail/:id",
-    element: <Detail/>,
+    element: <Detail />,
   },
 ]);
 
