@@ -20,15 +20,24 @@ export default function Datail() {
   return (
     <>
       {loading ? (
-        <div>Hello world! {id}</div>
+        <div>Welcome Pokemon world! {id}</div>
       ) : (
         <div>
           <h1>{pokemon.name}</h1>
           <img src={pokemon.sprites?.front_default} alt={pokemon.name} />
-            <img src={pokemon.sprites?.back_default} alt={pokemon.name} />
-            <ul>{pokemon.types?.map((t,i) => (
-              <li key={i}>{t.type.name }</li>
-            )) }</ul>
+          <img src={pokemon.sprites?.back_default} alt={pokemon.name} />
+          <ul>
+            type :
+            {pokemon.types?.map((t, i) => (
+              <li key={i}>{t.type.name}</li>
+            ))}
+          </ul>
+          <ul>
+            ability :{" "}
+            {pokemon.abilities?.map((a, i) => (
+              <li key={i}>{a.ability.name} </li>
+            ))}
+          </ul>
         </div>
       )}
     </>

@@ -6,17 +6,6 @@ function Home() {
   //[{ name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/", imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png" }, ....];
   const [pokeMon, setPokeMon] = useState([]);
 
-  // function fetchPokemonData(pokemon) {
-  //   let url = pokemon.url;
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then(function (pokeData) {
-  //       console.log("pokeData", pokeData);
-  //       setPokeMon(pokeData.forms);
-  //       setLoading(false);
-  //     });
-  // }
-
   useEffect(() => {
     const getPokemon = async () => {
       setLoading(true);
