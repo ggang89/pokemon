@@ -18,30 +18,60 @@ export default function Datail() {
     getPokemon();
   }, [id]);
   return (
-    <>
+    <div className="">
       {loading ? (
         <div>Welcome Pokemon world! {id}</div>
       ) : (
-        <div className="bg-slate-400">
-          <h1 className="text-xl">
-            {pokemon.name} <p className="text-lg text-gray-600"> #{id}</p>
-          </h1>
-          <img src={pokemon.sprites?.front_default} alt={pokemon.name} />
-          <img src={pokemon.sprites?.back_default} alt={pokemon.name} />
-          <ul>
-            type :
-            {pokemon.types?.map((t, i) => (
-              <li key={i}>{t.type.name}</li>
-            ))}
-          </ul>
-          <ul>
-            ability :{" "}
-            {pokemon.abilities?.map((a, i) => (
-              <li key={i}>{a.ability.name} </li>
-            ))}
-          </ul>
+        <div className=" ">
+          <div className="text-5xl  flex justify-center mb-3">
+            <h1 className=""> {pokemon.name}</h1> &nbsp;
+            <p className=" text-4xl text-gray-700 mt-2"> #{id}</p>
+            </div>
+            
+          <div className=" flex justify-center">
+            <div className="bg-slate-100 rounded-lg mr-5">
+              <img
+                className="object-contain w-[500px] h-[500px]"
+                src={pokemon.sprites?.front_default}
+                alt={pokemon.name}
+              />
+            </div>
+
+            <div className="bg-[#30A7D7] w-[300px] rounded-lg  p-5 leading-10 text-gray-50 text-lg ">
+              <span>back</span>
+              <img
+                className="bg-gray-200 rounded-full w-[150px] relative left-14 -top-5"
+                src={pokemon.sprites?.back_default}
+                alt={pokemon.name}
+              />
+              <div>
+                <span className="">Height</span> &ensp;
+                <span className="text-black text-xl ">{pokemon.height}</span>
+              </div>
+              <div>
+                <span className="text-gray-50">Weight </span> &ensp;
+                <span className="text-xl text-black">{pokemon.weight}</span>
+              </div>
+              <ul>
+                <span className=""> type </span>
+                {pokemon.types?.map((t, i) => (
+                  <li className="text-xl text-black leading-relaxed" key={i}>
+                    &ensp; {t.type.name}
+                  </li>
+                ))}
+              </ul>
+              <ul>
+                <span className="">ability </span>
+                {pokemon.abilities?.map((a, i) => (
+                  <li className="text-xl text-black leading-relaxed" key={i}>
+                    &ensp;{a.ability.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
