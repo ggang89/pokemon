@@ -12,7 +12,7 @@ function Home() {
       const response = await fetch(
         "https://pokeapi.co/api/v2/pokemon?limit=151"
       );
-    
+
       const toJson = await response.json();
       const newArr = toJson.results.map((v, i) => ({
         id: i + 1,
@@ -38,8 +38,10 @@ function Home() {
           </h1>
         </div>
       ) : (
-          <>
-            <h1 className="text-amber-400 font-bold text-5xl p-3 font-Bangers">Pokemon</h1>
+        <>
+          <h1 className="text-amber-400 font-bold text-5xl p-3 font-bangers">
+            Pokemon
+          </h1>
           <div className="grid grid-cols-4 gap-4 place-items-center">
             {pokeMon.map((p) => (
               <div
@@ -55,7 +57,7 @@ function Home() {
                     />
                   </Link>
                   <p className="italic text-gray-600 "># {p.id}</p>
-                  <h1 className="font-Banger text-3xl pt-3 pl-3 font-semibold text-center hover:text-[#30A7D7]">
+                  <h1 className="font-bangers text-3xl pt-3 pl-3 font-semibold text-center hover:text-[#30A7D7]">
                     <Link to={`/detail/${p.id}`}>{p.name}</Link>
                   </h1>
                 </div>

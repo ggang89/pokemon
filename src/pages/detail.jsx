@@ -24,11 +24,11 @@ export default function Datail() {
       ) : (
         <div className=" ">
           <div className="text-5xl  flex justify-center p-5">
-            <h1 className="text-white"> {pokemon.name}</h1> &nbsp;
-            <p className=" text-4xl text-gray-400 mt-2"> #{id}</p>
+            <h1 className="text-white font-bangers"> {pokemon.name}</h1> &nbsp;
+            <p className=" text-4xl text-gray-400 mt-2 font-bangers"> #{id}</p>
           </div>
 
-          <div className=" flex justify-center">
+          <div className=" flex justify-center font-roboto">
             <div className="bg-slate-100 rounded-lg mr-5">
               <img
                 className="object-contain w-[500px] h-[500px]"
@@ -38,22 +38,22 @@ export default function Datail() {
             </div>
 
             <div className="bg-[#30A7D7] w-[300px] rounded-lg  p-5 leading-10 text-gray-50 text-lg ">
-              <span>back</span>
+              <span className="font-bold">back</span>
               <img
                 className="bg-gray-200 rounded-full w-[150px] relative left-14 -top-5"
                 src={pokemon.sprites?.back_default}
                 alt={pokemon.name}
               />
               <div>
-                <span className="">Height</span> &ensp;
+                <span className="font-bold">Height</span> &ensp;
                 <span className="text-black text-xl ">{pokemon.height}</span>
               </div>
               <div>
-                <span className="text-gray-50">Weight </span> &ensp;
-                <span className="text-xl text-black">{pokemon.weight}</span>
+                <span className="text-gray-50 font-bold">Weight </span> &ensp;
+                <span className="text-xl text-black">{pokemon.weight} lbs</span>
               </div>
               <ul>
-                <span className=""> type </span>
+                <span className="font-bold"> type </span>
                 {pokemon.types?.map((t, i) => (
                   <li className="text-xl text-black leading-relaxed" key={i}>
                     &ensp; {t.type.name}
@@ -61,7 +61,7 @@ export default function Datail() {
                 ))}
               </ul>
               <ul>
-                <span className="">ability </span>
+                <span className="font-bold">ability </span>
                 {pokemon.abilities?.map((a, i) => (
                   <li className="text-xl text-black leading-relaxed" key={i}>
                     &ensp;{a.ability.name}

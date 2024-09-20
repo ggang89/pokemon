@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Bangers: ["Banger"]
-      }
+        bangers: ["Bangers", "system-ui"],
+        roboto:["Roboto", "sans-serif"]
+      },
     },
   },
   plugins: [],
 };
-
