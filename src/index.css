@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: 'Bangers';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.googleapis.com/css2?family=Bangers&display=swap") ;
+  }
+}
 ol,
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-object {
-  display: block;
-  vertical-align: middle;
-}
+
 img {
   max-width: 100%;
   height: auto;

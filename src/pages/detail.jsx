@@ -18,16 +18,16 @@ export default function Datail() {
     getPokemon();
   }, [id]);
   return (
-    <div className="">
+    <div className="bg-black h-screen">
       {loading ? (
         <div>Welcome Pokemon world! {id}</div>
       ) : (
         <div className=" ">
-          <div className="text-5xl  flex justify-center mb-3">
-            <h1 className=""> {pokemon.name}</h1> &nbsp;
-            <p className=" text-4xl text-gray-700 mt-2"> #{id}</p>
-            </div>
-            
+          <div className="text-5xl  flex justify-center p-5">
+            <h1 className="text-white"> {pokemon.name}</h1> &nbsp;
+            <p className=" text-4xl text-gray-400 mt-2"> #{id}</p>
+          </div>
+
           <div className=" flex justify-center">
             <div className="bg-slate-100 rounded-lg mr-5">
               <img
