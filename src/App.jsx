@@ -39,7 +39,7 @@ function Home() {
         </div>
       ) : (
           <>
-            <h1 className="text-amber-400 font-bold text-5xl p-3">Pokemon</h1>
+            <h1 className="text-amber-400 font-bold text-5xl p-3 font-Bangers">Pokemon</h1>
           <div className="grid grid-cols-4 gap-4 place-items-center">
             {pokeMon.map((p) => (
               <div

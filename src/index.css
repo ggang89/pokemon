@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-@layer base {
+/* @layer base {
   @font-face {
     font-family: 'Bangers';
     font-style: normal;
@@ -11,7 +11,11 @@
     font-display: swap;
     src: url("https://fonts.googleapis.com/css2?family=Bangers&display=swap") ;
   }
-}
+} */
+ @layer base {
+ @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+ }
+
 ol,
 ul {
   list-style: none;
